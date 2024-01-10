@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --cor-principal: #f00;
+    --cor-elementos: #fff;
+    --cor-fundo: #1a1919;
+    --cor-borders: #7e2e2e;
+    --cor-card2: #00d5ff;
+}
+
+body{
+    background-color: var(--cor-fundo);
+    height: 100vh;
+}
+
+.interface{
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+header{
+    padding: 40px 4%;
+}
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a{
+    text-decoration: none;
+    color: var(--cor-elementos);
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 0 44px;
+    font-size: 1.7rem;
+}
+
+.logo{
+    font-family: "Arvo", sans-serif, serif;
+    font-size: 1.8rem;
+}
+.logo:hover{
+    transition: 1s ease-in-out;
+    text-shadow: 10px 10px 10px var(--cor-borders);
+}
+.logo:not(:hover){
+    transition: 0.7s ease-in-out;
+}
+
+span{
+    color: var(--cor-principal);
+}
+
+.menu-inicio, 
+.menu-projetos{
+    font-family: "Arvo", sans-serif, serif;
+    cursor: pointer;
+    
+    
+}
+.menu-inicio:hover,
+.menu-projetos:hover{
+    color: var(--cor-principal);
+    transition: 1s;
+}
+.menu-inicio:not(:hover),
+.menu-projetos:not(:hover){
+    color: var(--cor-elementos);
+    transform: none;
+    transition: .8s;
+}
+
+header .btn-contato button{ 
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 20px;
+    background-color: var(--cor-elementos);
+    border: 0;
+    cursor: pointer;
+    
+}
+
+header .btn-contato button:hover{
+    background-color: var(--cor-principal);
+    color: var(--cor-elementos);
+    transform: rotate(4deg);
+    box-shadow: 0px 0px 8px var(--cor-principal);
+    transition: 1s;
+}
+header .btn-contato button:not(:hover) {
+    background-color: var(--cor-elementos);
+    color: var(--cor-principal);
+    transform: none;
+    box-shadow: none;
+    transition: 0.8s;
+}
+
+.texto-topo-site{
+    padding: 40px 4%;
+}
+
+section .txt-principal{
+    text-align: center;
+    color: var(--cor-elementos);
+    font-family: "Arvo", sans-serif, serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+section .list-projetos li {
+    border: 4px solid none;
+    background-color: #1c1c11;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 30px;
+    margin-left: 30px;
+    height: 320px; /* Ajuste a altura para acomodar a imagem */
+    width: 400px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+}
+
+section .list-projetos img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center; /* Garante que a imagem esteja centralizada */
+    transition: opacity .9 5s ease; /* Adiciona uma transição suave */
+}
+section .list-projetos img:hover{
+    opacity: .9;
+}
+
+
+section .list-projetos h3 {
+    position: absolute;
+    top: 50%; /* Posiciona no meio vertical */
+    left: 50%; /* Posiciona no meio horizontal */
+    transform: translate(-50%, -50%); /* Centraliza completamente */
+    z-index: 1; /* Garante que fique acima da imagem */
+}
+
+section .list-projetos button {
+    position: absolute;
+    bottom: 10px; /* Ajuste conforme necessário para a distância do botão até o fundo */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px; /* Ajuste conforme necessário */
+    font-size: 16px; /* Ajuste conforme necessário */
+    z-index: 1; /* Garante que fique acima da imagem */
+}
+.main-cards{
+    display: flex;
+    justify-content: center;
+}
+ .card{
+    margin: 50px;
+    background-color: var(--cor-elementos);
+    width: 350px;
+    height: 400px;
+    border-radius: 30px;
+    text-align: center;
+    font-family: "Arvo", sans-serif, serif;
+}
+.card:hover{
+    box-shadow: 0px 0px 20px var(--cor-borders);
+    transition: 1s ease-in-out;
+}
+.card:not(:hover){
+    box-shadow: 0px 0px 50px var(--cor-fundo);
+    transition: 0.5s ease-in-out;
+}
+.card card2:hover{
+    box-shadow: 0px 0px 20px var(--cor-fundo);
+    transition: 1s ease-in-out;
+}
+.card card2:not(:hover){
+    box-shadow: 0px 0px 20px var(--cor-card2);
+    transition: 0.5s ease-in-out;
+}
+
+
+
+ .card > h1{
+    font-size: 25px;
+    padding: 10px;
+}
+.card > button{
+    padding: 10px 40px;
+    margin: 30px;
+    border: none;
+    background-color: var(--cor-fundo);
+    color: var(--cor-elementos);
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.card button:hover{
+    background-color: var(--cor-principal);
+    transition: 1s ease-in-out;
+    box-shadow: 0px 0px 15px var(--cor-principal);
+}
+.card button:not(:hover){
+    background-color: var(--cor-fundo);
+    transition: 0.5s ease-in-out;
+    box-shadow: none;
+}
+ .card > img{
+    width: 100%;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+ } 
+
+ .card  a{
+    text-decoration: none;
+    color: var(--cor-elementos);
+ }
+

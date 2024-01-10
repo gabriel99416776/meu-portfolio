@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --cor-principal: #f00;
+    --cor-elementos: #fff;
+    --cor-fundo: #1a1919;
+    --cor-borders: #7e2e2e;
+    --cor-git: #171515;
+    --cor-zap: #25d366;
+    --cor-link: #0e76a8;
+}
+
+body{
+    background-color: var(--cor-fundo);
+    height: 100vh;
+}
+
+.interface{
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+header{
+    padding: 40px 4%;
+}
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a{
+    text-decoration: none;
+    color: var(--cor-elementos);
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 0 44px;
+    font-size: 1.7rem;
+}
+
+.logo{
+    font-family: "Arvo", sans-serif, serif;
+    font-size: 1.8rem;
+}
+.logo:hover{
+    transition: 1s ease-in-out;
+    text-shadow: 10px 10px 10px var(--cor-borders);
+}
+.logo:not(:hover){
+    transition: 0.7s ease-in-out;
+}
+
+span{
+    color: var(--cor-principal);
+}
+
+.menu-inicio, 
+.menu-projetos{
+    font-family: "Arvo", sans-serif, serif;
+    cursor: pointer;
+    
+    
+}
+.menu-inicio:hover,
+.menu-projetos:hover{
+    color: var(--cor-principal);
+    transition: 1s;
+}
+.menu-inicio:not(:hover),
+.menu-projetos:not(:hover){
+    color: var(--cor-elementos);
+    transform: none;
+    transition: .8s;
+}
+
+header .btn-contato button{ 
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 20px;
+    background-color: var(--cor-elementos);
+    border: 0;
+    cursor: pointer;
+    
+}
+
+header .btn-contato button:hover{
+    background-color: var(--cor-principal);
+    color: var(--cor-elementos);
+    transform: rotate(4deg);
+    box-shadow: 0px 0px 8px var(--cor-principal);
+    transition: 1s;
+}
+header .btn-contato button:not(:hover) {
+    background-color: var(--cor-elementos);
+    color: var(--cor-principal);
+    transform: none;
+    box-shadow: none;
+    transition: 0.8s;
+}
+
+.texto-topo-site{
+    padding: 40px 4%;
+}
+
+/* Finalizando  cabeçalho */
+
+main{
+    text-align: center; 
+    margin-top: 10px;
+} 
+
+main h1{
+    font-family: "Arvo", sans-serif, serif;
+    color: var(--cor-elementos);
+    font-size: 30px;
+}
+
+main i{
+    margin-top: 20px;
+    color: var(--cor-elementos);
+    padding: 10px; 
+    font-size: 30px;
+}
+ /* main .icons  i:hover{
+    transition: 1s ease-in-out;
+    color: var(--cor-principal);
+    text-shadow: 0px 0px 10px var(--cor-borders);
+}
+
+main .icons i:not(:hover){
+    transition: .7s ease-in-out;
+    color: var(--cor-elementos);
+}  */
+
+.fa-github:hover{
+    transition: .6s ease-in-out;
+    color: var(--cor-git);
+    text-shadow: 0px 0px 3px var(--cor-git);
+}
+
+.fa-github:not(:hover){
+    transition: .7s ease-in-out;
+    color: var(--cor-elementos);
+}
+
+.fa-whatsapp:hover{
+    transition: .6s ease-in-out;
+    color: var(--cor-zap);
+    text-shadow: 0px 0px 3px var(--cor-zap);
+}
+
+.fa-whatsapp:not(:hover){
+    transition: .7s ease-in-out;
+    color: var(--cor-elementos);
+}
+
+.fa-linkedin:hover{
+    transition: .6s ease-in-out;
+    color: var(--cor-link);
+    text-shadow: 0px 0px 3px var(--cor-link);
+}
+
+.fa-linkedin:not(:hover){
+    transition: .7s ease-in-out;
+    color: var(--cor-elementos);
+}

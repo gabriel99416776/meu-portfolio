@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --cor-principal: #f00;
+    --cor-elementos: #fff;
+    --cor-fundo: #1a1919;
+    --cor-borders: #7e2e2e;
+}
+
+body{
+    background-color: var(--cor-fundo);
+    height: 100vh;
+}
+
+.interface{
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+header{
+    padding: 40px 4%;
+}
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a{
+    text-decoration: none;
+    color: var(--cor-elementos);
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 0 44px;
+    font-size: 1.7rem;
+}
+
+.logo{
+    font-family: "Arvo", sans-serif, serif;
+    font-size: 1.8rem;
+}
+.logo:hover{
+    transition: 1s ease-in-out;
+    text-shadow: 10px 10px 10px var(--cor-borders);
+}
+.logo:not(:hover){
+    transition: 0.7s ease-in-out;
+}
+
+span{
+    color: var(--cor-principal);
+}
+
+.menu-inicio, 
+.menu-projetos{
+    font-family: "Arvo", sans-serif, serif;
+    cursor: pointer;
+    
+    
+}
+.menu-inicio:hover,
+.menu-projetos:hover{
+    color: var(--cor-principal);
+    transition: 1s;
+}
+.menu-inicio:not(:hover),
+.menu-projetos:not(:hover){
+    color: var(--cor-elementos);
+    transform: none;
+    transition: .8s;
+}
+
+header .btn-contato button{ 
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 20px;
+    background-color: var(--cor-elementos);
+    border: 0;
+    cursor: pointer;
+    
+}
+
+header .btn-contato button:hover{
+    background-color: var(--cor-principal);
+    color: var(--cor-elementos);
+    transform: rotate(4deg);
+    box-shadow: 0px 0px 8px var(--cor-principal);
+    transition: 1s;
+}
+header .btn-contato button:not(:hover) {
+    background-color: var(--cor-elementos);
+    color: var(--cor-principal);
+    transform: none;
+    box-shadow: none;
+    transition: 0.8s;
+}
+
+.texto-topo-site{
+    padding: 40px 4%;
+}
+
+section h1,
+section p{
+    font-family: "Arvo", sans-serif, serif;
+    color: var(--cor-elementos);
+}
+section h1{
+    font-size: 2rem;
+    margin-bottom: .8rem;
+    text-align: center;
+}
+section p{
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+section.corpo .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+ .corpo .img-topo-site img{
+    position: relative;
+    animation: flutuar 1.4s ease-in-out infinite alternate;
+    box-shadow:  0px 0px 8px var(--cor-principal);
+}
+
+@keyframes flutuar {
+    0%{
+        top: 0;
+        box-shadow:  0px 0px 0px var(--cor-principal);
+    }
+    100%{
+        top: 30px;
+        box-shadow:  0px 0px 40px var(--cor-principal);
+    }
+} 
+
+
+
+.img-topo-site  img{
+    width: 400px;
+    margin-top: 50px;
+    margin-right: 100px;
+    /* border-radius: 100px;    */
+    border-radius: 50% 20% 50% 20%;
+}
